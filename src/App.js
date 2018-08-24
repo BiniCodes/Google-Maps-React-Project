@@ -1,40 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import Locations from'./components/locations.js';
+
 
 class App extends Component {
+
+  state ={
+    locations: [
+      {name: 'Place Dummy1'},
+      {name:'Place Dummy2'},
+      {name:'Place Dummy3'},
+      {name:'Place Dummy4'},
+      {name:'Place Dummy5'},     
+    ]
+  }
+
   render() {
+
     return (
       <div className="App">
         <div className='container'>
-          <div className='containerList'>
-
-            <div className='containerSearchField'>
-
-              <div className='titleOfApp'>
-                  <h1 >GoogleMapsProject</h1>
-              </div>
-
-              <div className='inputAndFilterArea'>
-                    <form>
-                      <input type="text" placeholder="SearchLocation"
-                      />
-                      <button type="submit">SEARCH (ICON)</button>
-                    </form>
-              </div>  
-            </div>
-
-          <div className='search-location-results'>
-            <ol className='location-list'>
-              <li className='locationListItem'>Place DUMMY</li>
-              <li className='locationListItem'>Place DUMMY</li>
-              <li className='locationListItem'>Place DUMMY</li>
-              <li className='locationListItem'>Place DUMMY</li>
-              <li className='locationListItem'>Place DUMMY</li>
-            </ol>
-            
-          </div>
-          
-        </div>
+            <Locations places = {this.state.locations}/>
         <div className='containerMap'>
           <div className='mapContainer'>
             <div className='map'>
