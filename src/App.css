@@ -1,0 +1,274 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  background: white;
+  height:100%;
+}
+
+/* CSS mobile version */
+.container{
+display:flex;
+flex-direction: column;
+}
+
+/*CSS default style*/
+.containerList{
+border: 2px solid red;
+height: 320px;
+width: 100%;
+flex:1;
+}
+
+.containerSearchField{
+border: 2px solid black;
+display:flex;
+flex-direction: column;
+}
+
+.titleOfApp{
+border: 2px solid black;
+height: 20%;
+width:100%;
+flex:1;
+}
+
+.titleOfApp h1{
+  font-size: 1.2em;
+  padding-left: 10%;
+  font-family: Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px grey;
+}
+
+.inputAndFilterArea{
+border: 2px solid black;
+height: 40%;
+width: 100%;
+flex:2;
+}
+
+.inputAndFilterArea form input{
+  outline:none;
+  width:75%;
+  height: 20px;
+  padding: 5%;
+}
+
+button{
+  width:20%;
+  height: 20px;
+  padding: 8px 35px 18px 15px ;
+  font-size: 0.5em;
+}
+
+.search-location-results li {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 2%;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.inputWrapper{
+margin:0;
+box-sizing: border-box;
+width:50%;
+}
+
+.searchButtonWrapper{
+width: 20%;
+margin:0;
+
+}
+
+.search-location-results{
+border: 2px solid black;
+}
+
+.containerMap{
+margin-top: 2%; 
+border: 2px solid blue;
+height: 350px;
+width: 100%;
+}
+
+.mapContainer{
+
+}
+
+.map{
+}
+
+
+/*CSS Tablet version*/
+@media (min-width: 600px) {
+body{
+  font-size: 1.5em;
+}
+.containerList{
+border: 2px solid red;
+height: 600px;
+width: 100%;
+flex:1;
+}
+
+.containerSearchField{
+border: 2px solid black;
+display:flex;
+flex-direction: column;
+}
+
+.titleOfApp{
+border: 2px solid black;
+height: 20%;
+width:100%;
+flex:1;
+}
+
+.titleOfApp h1{
+  font-size: 1.6em;
+  padding-left: 10%;
+  font-family: Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px grey;
+}
+
+.inputAndFilterArea{
+border: 2px solid black;
+height: 40%;
+width: 100%;
+flex:2;
+}
+
+.inputAndFilterArea form input{
+  outline:none;
+  width:75%;
+  height: 20px;
+  padding: 5%;
+}
+
+button{
+  width:20%;
+  height: 20px;
+  padding: 38px 45px 38px 25px;
+  margin:1px;
+  font-size: 0.5em;
+}
+
+.inputWrapper{
+margin:0;
+box-sizing: border-box;
+width:50%;
+}
+
+.searchButtonWrapper{
+width: 20%;
+margin:0;
+
+}
+
+.search-location-results{
+border: 2px solid black;
+}
+
+.containerMap{
+margin-top: 2%; 
+border: 2px solid blue;
+height: 600px;
+width: 100%;
+}
+
+}
+
+/*CSS Default Desktop version*/
+@media (min-width: 1026px) {
+body{
+  font-size: 1.1em;
+}
+.container{
+display:flex;
+flex-direction: row;
+}
+
+.containerList{
+border: 2px solid red;
+height:750px;
+width: 20%;
+flex:1;
+}
+
+.containerSearchField{
+border: 2px solid black;
+display:flex;
+flex-direction: column;
+}
+
+.titleOfApp{
+border: 2px solid black;
+height: 20%;
+width:100%;
+flex:1;
+}
+
+.titleOfApp h1{
+  padding-left: 10%;
+  font-family: Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px grey;
+  font-size: 1.0em;
+}
+
+.inputAndFilterArea{
+border: 2px solid black;
+height: 40%;
+width:100%;
+flex:2;
+}
+
+.inputAndFilterArea form input{
+  outline:none;
+  width:75%;
+  height: 20px;
+  padding: 5%;
+}
+
+.inputAndFilterArea form button{
+  width:20%;
+  height: 20px;
+  padding: 2%;
+}
+
+.inputWrapper{
+margin:0;
+box-sizing: border-box;
+width:50%;
+}
+
+.searchButtonWrapper{
+width: 20%;
+margin:0;
+
+}
+
+.search-location-results{
+border: 2px solid black;
+height: 75%;
+}
+
+
+
+.containerMap{
+border: 2px solid blue;
+height:750px;
+width: 80%;
+margin:0;
+}
+
+.mapContainer{
+
+}
+
+.map{
+  
+}
+}
