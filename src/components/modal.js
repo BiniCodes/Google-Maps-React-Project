@@ -16,6 +16,7 @@ render(){
           {this.props.place.info}
           </p>
           <button
+          	className='button-modal'
             onClick={() => this.props.handleClose(this.props.place)}
           >
             Close

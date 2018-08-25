@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Locations from'./components/locations.js';
+import MapContainer from './components/MapContainer.js';
+
 
 
 class App extends Component {
@@ -77,13 +79,7 @@ fetch('https://api.foursquare.com/v2/venues/explore?client_id=XRZY1VTWHC2AJXC14P
       <div className="App">
         <div className='container'>
             <Locations places = {this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
-        <div className='containerMap'>
-          <div className='mapContainer'>
-            <div className='map'>
-              
-            </div>
-          </div>
-        </div>
+            <MapContainer places={this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
       </div>
     </div>
     );
