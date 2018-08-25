@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//With help from: https://codepen.io/alligatorio/pen/aYzMKL
+
 class Modal extends Component{
 
 render(){

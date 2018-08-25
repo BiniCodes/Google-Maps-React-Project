@@ -9,30 +9,30 @@ class Locations extends Component{
 
 	state = {
 		query:'',
+		showingPlaces: this.props.places
+
 	}
 
 	updateQuery = (query) => {
 		//Updating the query while typing in the input field
-		this.setState({query})
+		this.setState({query});
+		console.log(query);
+
+			    if(query){
+			    	const matchLocation = new RegExp(escapeRegExp(this.state.query), 'i')
+					this.state.showingPlaces = this.props.places.filter(()=> matchLocation.test(this.props.places.name))			
+				} else{
+					this.state.showingPlaces = this.props.places
+					console.log(this.state.showingPlaces)
+				}
 	}
 
-	/*handleClick(e) {
-		alert('name was clicked');
-		e.preventDefault();
-	}*/
 
 	render(){
 	    const places = this.props.places;
 	    const { query } = this.state
 
-	    let showingPlaces;
-	    if(query){
-	    	const matchLocation = new RegExp(escapeRegExp(this.state.query), 'i')
-			showingPlaces = places.filter(()=> matchLocation.test(places.name))			
-		} else{
-			showingPlaces = places
-			console.log(places)
-		}
+
 
 		return(
           <div className='containerList'>
@@ -57,7 +57,7 @@ class Locations extends Component{
 	          <div className='search-location-results'>
 		            <ol className='location-list'>
 		            {
-		                showingPlaces.map(place =>
+		                this.state.showingPlaces.map(place =>
 		                    <li key={place.name} className='locationListItem'>
 		                        <Modal show={place.show} place={ place } handleClose={this.props.hideModal} >
 			                  </Modal>
