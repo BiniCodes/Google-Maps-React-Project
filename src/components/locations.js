@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
+import Loc from './loc.js'
+import Modal from './modal.js'
+
 
 class Locations extends Component{
 
 	state = {
-		query:''
+		query:'',
 	}
 
 	updateQuery = (query) => {
@@ -11,16 +16,22 @@ class Locations extends Component{
 		this.setState({query})
 	}
 
+	/*handleClick(e) {
+		alert('name was clicked');
+		e.preventDefault();
+	}*/
+
 	render(){
 	    const places = this.props.places;
 	    const { query } = this.state
 
 	    let showingPlaces;
 	    if(query){
-			showingPlaces = places.filter(()=> query.test(places.name))
+	    	const matchLocation = new RegExp(escapeRegExp(this.state.query), 'i')
+			showingPlaces = places.filter(()=> matchLocation.test(places.name))			
 		} else{
-			showingPlaces = places;
-			console.log(places);
+			showingPlaces = places
+			console.log(places)
 		}
 
 		return(
@@ -47,7 +58,11 @@ class Locations extends Component{
 		            <ol className='location-list'>
 		            {
 		                showingPlaces.map(place =>
-		                    <li key={place.name} className='locationListItem'>{ place.name }</li>
+		                    <li key={place.name} className='locationListItem'>
+		                        <Modal show={place.show} place={ place } handleClose={this.props.hideModal} >
+			                  </Modal>
+			                  <a href='#' onClick={() => this.props.showModal(place)}>{place.name}</a>
+		                    </li>
 		                    )
 		            }
 		            </ol> 
