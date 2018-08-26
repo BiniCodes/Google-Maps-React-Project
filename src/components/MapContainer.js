@@ -15,7 +15,7 @@ class MapContainer extends Component{
 					places={this.props.places} 
 					googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyDv_AT1NaiOVMyf6BWTV1Iy9euK70eYTPk'}
 					loadingElement={<div style={{ height: `100%` }} />}
-					containerElement={<div style={{ height: `750px`, width: `80%` }} />}
+					containerElement={<div style={{ height: `750px`, width: `100%` }} />}
 					mapElement={<div style={{ height: `100%` }} />}
 				/>
        			{ console.log( this.props.places ) }

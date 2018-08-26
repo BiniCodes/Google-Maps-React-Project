@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Locations from'./components/locations.js';
 import MapContainer from './components/MapContainer.js';
+import defaulIcon from './defaultIcon.png'
 
 
 
@@ -12,27 +13,32 @@ class App extends Component {
        {name: 'Place Dummy eins',
          info: 'info1',
          show: false,
-         marker:{lat: 40.417192, lng: -3.703518}  
+         marker:{lat: 40.417192, lng: -3.703518},
+         icon: {url:'http://www.google.com/mapfiles/marker.png'}  
         },
         {name: 'Place Dummy zwei',
          info: 'info2', 
          show: false,
-         marker:{lat:40.418409, lng: -3.702847}
+         marker:{lat:40.418409, lng: -3.702847},
+         icon: {url:'http://www.google.com/mapfiles/marker.png'}  
         },
         {name: 'Place Dummy drei',
          info: 'info3', 
          show: false,
-         marker:{lat:40.416963, lng: -3.706892}
+         marker:{lat:40.416963, lng: -3.706892},
+         icon: {url:'http://www.google.com/mapfiles/marker.png'}  
         },
         {name:'Place Dummy vier',
         info: 'info4',
         show: false,
-         marker:{lat:40.416318, lng: -3.701581}
+         marker:{lat:40.416318, lng: -3.701581},
+         icon: {url:'http://www.google.com/mapfiles/marker.png'}  
         }, 
         {name:'Place Dummy fünf',
         info: 'info5',
         show: false,
-         marker:{lat:40.418115, lng: -3.702493}
+         marker:{lat:40.418115, lng: -3.702493},
+         icon: {url:'http://www.google.com/mapfiles/marker.png'}  
         }     
     ],
 
@@ -71,6 +77,23 @@ fetch('https://api.foursquare.com/v2/venues/explore?client_id=XRZY1VTWHC2AJXC14P
     this.setState({ locations, });
   }
 
+  //https://stackoverflow.com/questions/29537299/react-how-do-i-update-state-item1-on-setstate-with-jsfiddle
+  //https://stackoverflow.com/questions/49511040/how-to-change-google-maps-marker-icon-when-user-clicked-the-marker-icon
+  changeMarker = (place) => {
+    console.log(place.icon);
+    const locations = this.state.locations;
+    place.icon = {url:'http://maps.google.com/mapfiles/arrow.png'};
+
+    this.setState({ locations, });
+  }
+  
+  defaultMarker = (place) => {
+    const locations = this.state.locations;
+    place.icon = {url:'http://www.google.com/mapfiles/marker.png'};
+
+    this.setState({ locations, });
+  }
+
 
 
   render() {
@@ -78,7 +101,7 @@ fetch('https://api.foursquare.com/v2/venues/explore?client_id=XRZY1VTWHC2AJXC14P
     return (
       <div className="App">
         <div className='container'>
-            <Locations places = {this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
+            <Locations places = {this.state.locations} changeMarker={this.changeMarker} defaultMarker={this.defaultMarker}/>
             <MapContainer places={this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
       </div>
     </div>

@@ -8,17 +8,13 @@ import Modal from './modal.js';
 import defaulIcon from './../defaultIcon.png'
 
 
-let isOpen=false;
-function onToggleOpen({isOpen}){
-					isOpen: true
-				}
-
 const MyMap = withScriptjs(withGoogleMap((props) => {
 
 				const markers = props.places.map( place => 
+
 						<Marker
 							key={place.name}
-							icon={defaulIcon}
+							icon={place.icon}
 							id={place.marker.lat}
 							position={{ lat: place.marker.lat, lng: place.marker.lng }}
 							onClick={() => props.showModal(place)}

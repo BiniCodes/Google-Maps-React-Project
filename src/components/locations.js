@@ -59,9 +59,7 @@ class Locations extends Component{
 		            {
 		                this.state.showingPlaces.map(place =>
 		                    <li key={place.name} className='locationListItem'>
-		                        <Modal show={place.show} place={ place } handleClose={this.props.hideModal} >
-			                  </Modal>
-			                  <a href='#' onClick={() => this.props.showModal(place)}>{place.name}</a>
+			                  <a href='#' onClick={() => this.props.changeMarker(place)}>{place.name}</a>
 		                    </li>
 		                    )
 		            }
