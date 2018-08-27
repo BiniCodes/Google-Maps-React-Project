@@ -15,6 +15,7 @@ class Locations extends Component{
 	              <div className='inputAndFilterArea'>
 	                    <form>
 	                      <input 
+	                      aria-label={'Search Location'}
 	                      id="place name"
 	                      type="text" 
 	                      placeholder="Search Location"
