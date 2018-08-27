@@ -13,6 +13,7 @@ class MapContainer extends Component{
 					showModal={this.props.showModal}
 					hideModal={this.props.hideModal}
 					places={this.props.places} 
+					/*Add own API key here*/
 					googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyDv_AT1NaiOVMyf6BWTV1Iy9euK70eYTPk'}
 					loadingElement={<div style={{ height: `100%` }} />}
 					containerElement={<div style={{ height: `750px`, width: `100%` }} />}
