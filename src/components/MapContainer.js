@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import MyMap from './Map.js';
-import App from './../App.js';
 
 
 class MapContainer extends Component{ 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
-import Loc from './loc.js'
-import Modal from './modal.js'
 
 
 class Locations extends Component{

@@ -1,6 +1,6 @@
 //Map commponent
 
-import React, { Component } from 'react';
+import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker,InfoWindow } from "react-google-maps";
 import FirstMarker from './firstMarker.js';
 import MapContainer from './MapContainer.js';
