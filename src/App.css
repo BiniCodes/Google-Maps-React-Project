@@ -136,6 +136,11 @@ width: 100%;
   list-style-type: none;
 }
 
+.attribution{
+  font-size:0.3em;
+  font-style: italic;
+}
+
 .display-block {
   display: block;
 }

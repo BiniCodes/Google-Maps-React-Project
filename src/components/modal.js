@@ -21,6 +21,9 @@ render(){
 	          		<li className='modalInfo' key={i.id}>
 		                {i.name + ' '}
 		                {i.location.formattedAddress + ' '}
+		                <p className='attribution'>
+	             	  		<a href='https://developer.foursquare.com/docs/resources/categories'> Attribution to: Foursquare.com</a>
+	             	 	</p>
 	             	 </li>
 	             	 );
 	             	}
