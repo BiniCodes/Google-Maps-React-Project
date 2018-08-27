@@ -31,10 +31,30 @@ usage of controlled component.
 
 * Note: Make sure Node.js is installed.
 
-
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+## Servie Worker and Production Mode
+By default, thanks to 'Create React App', there is a build in Service Worker that can load the app from local cache in offline modus.
+
+!! The Service Worker only works in production mode !!
+
+#### Build the Production Mode:
+1. Open the command line for the project folder / root directory
+2. Run 'npm run build' or 'yarn build'
+
+#### Run the production app on a local server  
+1. Follow instruction of 'Build the Production Mode'
+2. Run 'serve -s build' in your command line
+3. Open provided Localhost address in browser (Default: http://localhost:5000)
+
+Further reading: 
+
+*[create-react-app README](https://github.com/facebook/create-react-app#npm-run-build)
+*[create-react-app Deployment](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
+
+
 
 ## Code Reference
 
