@@ -7,5 +7,5 @@ import registerSw from './registerSw';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
-//registerServiceWorker();
+registerServiceWorker();
 
