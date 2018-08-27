@@ -14,7 +14,7 @@ render(){
         <div tabIndex='0' className='modal-main'>
           <div>
           <ol>
-          {		
+          {		(info != null) ?
 	          	info.map(i => {
 	          		if(place.id === i.id){
 	          			return(
@@ -22,11 +22,9 @@ render(){
 		                {i.name + ' '}
 		                {i.location.formattedAddress + ' '}
 	             	 </li>
-	             	 )
-	             	} else{
-	             		''
+	             	 );
 	             	}
-	          	}) 			
+	          	}) : alert('Oops, sorry. Something went wrong. Please refresh the page!')		
           }
     	  </ol>	
           </div>

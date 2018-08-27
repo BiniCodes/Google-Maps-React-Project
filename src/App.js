@@ -62,13 +62,13 @@ class App extends Component {
           response.json()
           )
         .then((data) => this.setState({data: data.response.venues}))
-        .catch(error =>
-          console.log('Fetch did not work', error)
+        .catch(error =>{
             // Code for handling errors
-    )
+          console.log('Fetch did not work', error);
+          alert('Sorry, something went wrong. Please refresh the page!')
+          }
+          )
   }
-
-
 
   updateQuery = (query) => {
     //Updating the query while typing in the input field

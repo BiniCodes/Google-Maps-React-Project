@@ -276,12 +276,6 @@ flex:2;
   padding: 5%;
 }
 
-.inputAndFilterArea form button{
-  width:20%;
-  height: 20px;
-  padding: 2%;
-}
-
 .inputWrapper{
 margin:0;
 box-sizing: border-box;
@@ -322,5 +316,10 @@ margin:0;
   }
 .button-modal{
   font-size:0.8em;
+  height: 50px;
 }
+.modal-main {
+  height: 50%;
+  }
+
 }

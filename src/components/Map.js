@@ -22,7 +22,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
 							<Modal info={props.info} show={place.show} place={ place } places={props.places} handleClose={props.hideModal} >
 			             	</Modal>
 						</Marker>
-					) : ''
+					) : alert('Oops, sorry. Something went wrong. Please refresh the page!')
 				
 				return(
 				<div>

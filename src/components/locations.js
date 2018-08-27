@@ -42,7 +42,7 @@ class Locations extends Component{
 			                  {place.name}
 			                  </a>
 		                    </li>
-		                    ) : ''
+		                    ) : alert('Oops, sorry. Something went wrong. Please refresh the page!')
 		            }
 		            </ol> 
 	          </div>
