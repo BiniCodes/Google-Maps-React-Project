@@ -7,6 +7,7 @@ class MapContainer extends Component{
 	render() {
 		return(
 			<div role='application' className='containerMap'>
+			{/*Display the MapContainer and set API key, size of the map*/}
 				<MyMap
 					info={this.props.info}
 					showModal={this.props.showModal}
@@ -17,7 +18,6 @@ class MapContainer extends Component{
 					containerElement={<div style={{ height: `750px`, width: `100%` }} />}
 					mapElement={<div style={{ height: `100%` }} />}
 				/>
-       			{ console.log( this.props.info ) }
        		</div>
 			);
 	}
