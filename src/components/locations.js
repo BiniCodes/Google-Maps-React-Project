@@ -62,8 +62,9 @@ class Locations extends Component{
 			                  href='#' 
 			                  onKeyDown={(e) => (e.keyCode===13) ? this.props.changeMarker(place) : ''}
 			                  onKeyUp={() => setTimeout(() => this.props.defaultMarker(place),3500)}
-			                  onMouseDown={() => setTimeout(() => this.props.changeMarker(place),500)}
+			                  onMouseDown={() => this.props.changeMarker(place)}
 			                  onMouseUp={() => setTimeout(() => this.props.defaultMarker(place),3500)}
+			                  onClick={() => setTimeout(() => this.props.showModal(place),800)}
 			                  >
 			                  {place.name}
 			                  </a>
