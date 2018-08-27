@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Locations from'./components/locations.js';
 import MapContainer from './components/MapContainer.js';
+import ErrorBoundary from './ErrorBoundary.js'
 
 
 class App extends Component {
@@ -145,9 +146,14 @@ class App extends Component {
       <div className="App">
         <div className='container'>
             {/*Display list of locations and filter input field with Locations component */}
+            <ErrorBoundary>
             <Locations updateQuery={this.updateQuery}  places = {this.state.filteredLocations} changeMarker={this.changeMarker} defaultMarker={this.defaultMarker} showModal={this.showModal} hideModal={this.hideModal}/>
+            </ErrorBoundary>
+
             {/*Display google map with markers with MapContainer component*/}
+            <ErrorBoundary>
             <MapContainer info={this.state.data} tabIndex='-1'  places={this.state.filteredLocations} showModal={this.showModal} hideModal={this.hideModal}/>
+            </ErrorBoundary>
       </div>
     </div>
     );

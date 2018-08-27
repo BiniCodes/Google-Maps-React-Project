@@ -35,7 +35,7 @@ render(){
 		             	  		<a href='https://developer.foursquare.com/docs/resources/categories'> Attribution to: Foursquare.com</a>
 		             	 	</p>
 		             	 </li>
-	             	 );
+	             		 );
 	             	}
 	          	}) : 
 				/*If info array is empty, display error message to user*/
