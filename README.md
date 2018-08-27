@@ -36,10 +36,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Code Reference
 
-1.[API Usage: Foursquare / Search for Venues](https://developer.foursquare.com/docs/api/venues/search)
+1.[API Usage Data: Foursquare / Search for Venues](https://developer.foursquare.com/docs/api/venues/search)
 
 2.[Reactjs Documentation](https://reactjs.org/docs/hello-world.html)
 
 3.[Google Maps API](https://cloud.google.com/maps-platform/maps/)
 
 4.[Create React App](https://github.com/facebookincubator/create-react-app)
+
+5.[react-google-maps from tomchentw](https://github.com/tomchentw/react-google-maps)
+
+
+
