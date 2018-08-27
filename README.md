@@ -7,15 +7,17 @@
 
 ### About this project
 This project is a singla-page application written in Reactjs featuring a map displaying the center of Madrid, ES.
-It includes a list and markers of points of interests near the displayed area.
+It includes a list of names and markers on the map of points of interests near the displayed area.
+With typing into the input field the names of the points of interests in the list and their related markers can be filtered in real time with the
+usage of controlled component.
 
-##Functionalities
+## Functionalities
 * Location Filter: Filter list items and markers on the map
 * Modal Window with information: Clicking a list item or marker will display a modal window with information about the clicked place.
 * Marker effect: Clicking a list item will add an effect to the marker
-* Google Maps API and Foursquare Search Venue API are are requested in an asynchronous way using the Fetch API
-* Foursquare API is used to display information about a place
-* Accesibility is provided
+* [Google Maps API](https://cloud.google.com/maps-platform/maps/) and [Foursquare Search Venue API](https://developer.foursquare.com/docs/api/venues/search) are are requested in an asynchronous way using the Fetch API
+* [Foursquare API](https://developer.foursquare.com/docs/api/venues/search) is used to display information about a place
+* Accessibility is provided
 * Service Worker is implemented to cache files and display the website in offline modus
 
 
@@ -36,15 +38,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Code Reference
 
-1.[API Usage Data: Foursquare / Search for Venues](https://developer.foursquare.com/docs/api/venues/search)
+1. [API Usage Data: Foursquare / Search for Venues](https://developer.foursquare.com/docs/api/venues/search)
 
-2.[Reactjs Documentation](https://reactjs.org/docs/hello-world.html)
+2. [Reactjs Documentation](https://reactjs.org/docs/hello-world.html)
 
-3.[Google Maps API](https://cloud.google.com/maps-platform/maps/)
+3. [Google Maps API](https://cloud.google.com/maps-platform/maps/)
 
-4.[Create React App](https://github.com/facebookincubator/create-react-app)
+4. [Create React App](https://github.com/facebookincubator/create-react-app)
 
-5.[react-google-maps from tomchentw](https://github.com/tomchentw/react-google-maps)
+5. [react-google-maps from tomchentw](https://github.com/tomchentw/react-google-maps)
 
 
 
