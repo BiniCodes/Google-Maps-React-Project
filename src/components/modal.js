@@ -11,8 +11,8 @@ render(){
 
     return (
       <div className={showHideClassName}>
-        <div tabindex='0' className='modal-main'>
-          <p>
+        <div tabIndex='0' className='modal-main'>
+          <div>
           <ol>
           {		
 	          	info.map(i => {
@@ -29,11 +29,11 @@ render(){
 	          	}) 			
           }
     	  </ol>	
-          </p>
+          </div>
           <button
           	aria-label="Close"
           	className='button-modal'
-          	tabindex='0'
+          	tabIndex='0'
             onClick={() => this.props.handleClose(this.props.place)}
           >
             Close

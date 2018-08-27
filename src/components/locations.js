@@ -17,10 +17,10 @@ class Locations extends Component{
 		console.log(query);
 
 			    if(query){
-			    	const matchLocation = new RegExp(escapeRegExp(this.state.query), 'i')
-					this.state.showingPlaces = this.props.places.filter(()=> matchLocation.test(this.props.places.name))			
+			    	const match = this.props.places.filter(p => this.state.query === '' || p.name.includes(this.state.query))
+			    	this.setState({showingPlaces : match})
 				} else{
-					this.state.showingPlaces = this.props.places
+					this.setState({showingPlaces: this.props.places})
 					console.log(this.state.showingPlaces)
 				}
 	}
