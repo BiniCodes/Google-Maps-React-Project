@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Modal extends Component{
 
 render(){
-  const { show, handleClose , place } = this.props;  
+  const { show, place } = this.props;  
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
   let info = this.props.info;
 
