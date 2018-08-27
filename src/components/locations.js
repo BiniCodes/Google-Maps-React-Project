@@ -17,7 +17,7 @@ class Locations extends Component{
 		console.log(query);
 
 			    if(query){
-			    	const match = this.props.places.filter(p => this.state.query === '' || p.name.includes(this.state.query))
+			    	const match = this.props.places.filter(p => this.state.query === '' || p.name.toLowerCase().includes(this.state.query)|| p.name.includes(this.state.query)) 
 			    	this.setState({showingPlaces : match})
 				} else{
 					this.setState({showingPlaces: this.props.places})
@@ -36,7 +36,7 @@ class Locations extends Component{
           <div className='containerList'>
 	            <div className='containerSearchField'>
 	              <div className='titleOfApp'>
-	                  <h1 aria-label={'GoogleMapsProject'}>GoogleMapsProject</h1>
+	                  <h1>GoogleMapsProject</h1>
 	              </div>
 
 	              <div className='inputAndFilterArea'>
@@ -48,7 +48,6 @@ class Locations extends Component{
 	                      value={this.state.query}
 	                      onChange={(e) => this.updateQuery(e.target.value)}
 	                      />
-	                      <button aria-label="Submit" type="submit">SEARCH (ICON)</button>
 	                    </form>
 	              </div>  
 	            </div>

@@ -99,9 +99,9 @@ fetch('https://api.foursquare.com/v2/venues/search?client_id=XRZY1VTWHC2AJXC14PL
 
     return (
       <div className="App">
-        <div tabIndex='-1' className='container'>
+        <div className='container'>
             <Locations places = {this.state.locations} changeMarker={this.changeMarker} defaultMarker={this.defaultMarker} showModal={this.showModal} hideModal={this.hideModal}/>
-            <MapContainer info={this.state.data} tabIndex='-1' aria-role={'application'} places={this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
+            <MapContainer info={this.state.data} tabIndex='-1'  places={this.state.locations} showModal={this.showModal} hideModal={this.hideModal}/>
       </div>
     </div>
     );

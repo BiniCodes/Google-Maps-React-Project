@@ -6,7 +6,7 @@ import MyMap from './Map.js';
 class MapContainer extends Component{ 
 	render() {
 		return(
-			<div className='containerMap'>
+			<div role='application' className='containerMap'>
 				<MyMap
 					info={this.props.info}
 					showModal={this.props.showModal}
