@@ -1,16 +1,15 @@
 //Map commponent
-
 import React from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker,InfoWindow } from "react-google-maps";
-import FirstMarker from './firstMarker.js';
-import MapContainer from './MapContainer.js';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import Modal from './modal.js';
-import defaulIcon from './../defaultIcon.png'
 
 
 const MyMap = withScriptjs(withGoogleMap((props) => {
 
-				const markers = props.places.map( place => 
+				const markers = 
+		        (props.places != null) ?
+
+				props.places.map( place => 
 
 						<Marker
 							tabIndex='0'
@@ -23,7 +22,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
 							<Modal info={props.info} show={place.show} place={ place } places={props.places} handleClose={props.hideModal} >
 			             	</Modal>
 						</Marker>
-					)
+					) : ''
 				
 				return(
 				<div>

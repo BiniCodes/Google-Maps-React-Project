@@ -1,36 +1,9 @@
 import React, { Component } from 'react';
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
-
 
 class Locations extends Component{
 
-	state = {
-		query:'',
-		showingPlaces: this.props.places
-
-	}
-
-	updateQuery = (query) => {
-		//Updating the query while typing in the input field
-		this.setState({query});
-		console.log(query);
-
-			    if(query){
-			    	const match = this.props.places.filter(p => this.state.query === '' || p.name.toLowerCase().includes(this.state.query) || p.name.includes(this.state.query)) 
-			    	this.setState({showingPlaces : match})
-				} else{
-					this.setState({showingPlaces: this.props.places})
-					console.log(this.state.showingPlaces)
-				}
-	}
-
-
 	render(){
 	    const places = this.props.places;
-	    const { query } = this.state
-
-
 
 		return(
           <div className='containerList'>
@@ -45,8 +18,8 @@ class Locations extends Component{
 	                      id="place name"
 	                      type="text" 
 	                      placeholder="Search Location"
-	                      value={this.state.query}
-	                      onChange={(e) => this.updateQuery(e.target.value)}
+	                      value={this.props.query}
+	                      onChange={(e) => this.props.updateQuery(e.target.value)}
 	                      />
 	                    </form>
 	              </div>  
@@ -55,7 +28,8 @@ class Locations extends Component{
 	          <div className='search-location-results'>
 		            <ol className='location-list'>
 		            {
-		                this.state.showingPlaces.map(place =>
+		            	(places != null) ?
+		                places.map(place =>
 		                    <li key={place.name} className='locationListItem'>
 			                  <a 
 			                  href='#' 
@@ -68,7 +42,7 @@ class Locations extends Component{
 			                  {place.name}
 			                  </a>
 		                    </li>
-		                    )
+		                    ) : ''
 		            }
 		            </ol> 
 	          </div>
