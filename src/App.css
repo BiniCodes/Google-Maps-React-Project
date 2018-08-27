@@ -14,35 +14,33 @@ body{
 display:flex;
 flex-direction: column;
 }
-/*CSS default style*/
+
 .containerList{
 height: 310px;
 width: 100%;
 flex:1;
-}
-
-.containerSearchField{
-border: 2px solid black;
-display:flex;
-flex-direction: column;
+background-color:#2E151B;
 }
 
 .titleOfApp{
-border: 2px solid black;
+border: 2px solid #7E685A;
 height: 20%;
 width:100%;
 flex:1;
+letter-spacing:0.2px;
+background-color: #AFD275;
+color: #2C3531;
 }
 
 .titleOfApp h1{
   font-size: 1.2em;
   padding-left: 10%;
   font-family: Helvetica, Arial, sans-serif;
-  text-shadow: 1px 1px grey;
 }
 
 .inputAndFilterArea{
-border: 2px solid black;
+border: 3px solid #2E151B;
+border-radius: 2px;
 height: 40%;
 width: 100%;
 flex:2;
@@ -64,13 +62,20 @@ button{
 
 .search-location-results li {
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #C2B9B0;
+  border-radius: 5px;
   padding: 1%;
   margin-right:5%;
   margin-bottom: 2%;
   background-color: white;
   box-shadow: 1px 1px 2px grey;
   list-style-type: none;
+  background-color:#AFD275;
+}
+
+.search-location-results li a{
+  text-decoration-line: none;
+  color:#2E151B;
 }
 
 .inputWrapper{
@@ -82,23 +87,12 @@ width:50%;
 .searchButtonWrapper{
 width: 20%;
 margin:0;
-
-}
-
-.search-location-results{
 }
 
 .containerMap{
 margin-top: 2%; 
 height: 750px;
 width: 100%;
-}
-
-.mapContainer{
-
-}
-
-.map{
 }
 
 .modal {
@@ -109,18 +103,21 @@ width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
+
 .modal-main {
     position:fixed;
     background-color: #E3E2DF;
     margin: 50px;
     padding: 20px;
-    border: 4px solid black;
+    border: 4px solid #2E151B;
     width: 80%;
     height: 40%;
     font-size: 1.1em;
     border-radius:25px;
-    
+    background-color: #C2B9B0;
+    color:#2E151B;  
   }
+
 .button-modal{
   cursor: pointer;
   width:80%;
@@ -128,8 +125,11 @@ width: 100%;
   margin-left: auto;
   margin-right: auto;
   display:block;
-  font-size:1.2em;
+  font-size: 1.2em;
   border-radius:25px;
+  background-color: #AFD275;
+  font-weight: bold;
+  color: #2E151B;
 }
 
 .modalInfo{
@@ -149,182 +149,116 @@ width: 100%;
   display: none;
 }
 
+
+
 /*CSS Tablet version*/
 @media (min-width: 530px) {
-body{
-  font-size: 1.5em;
-}
-.containerList{
-height: 550px;
-width: 100%;
-flex:1;
-}
-
-.containerSearchField{
-border: 2px solid black;
-display:flex;
-flex-direction: column;
-}
-
-.titleOfApp{
-border: 2px solid black;
-height: 20%;
-width:100%;
-flex:1;
-}
-
-.titleOfApp h1{
-  font-size: 1.6em;
-  padding-left: 10%;
-  font-family: Helvetica, Arial, sans-serif;
-  text-shadow: 1px 1px grey;
-}
-
-.inputAndFilterArea{
-border: 2px solid black;
-height: 40%;
-width: 100%;
-flex:2;
-}
-
-.inputAndFilterArea form input{
-  outline:none;
-  width:100%;
-  height: 20px;
-  padding: 5%;
-}
-
-button{
-  width:20%;
-  height: 20px;
-  padding: 38px 45px 38px 25px;
-  margin:1px;
-  font-size: 0.5em;
-}
-
-.inputWrapper{
-margin:0;
-box-sizing: border-box;
-width:50%;
-}
-
-.searchButtonWrapper{
-width: 20%;
-margin:0;
-
-}
-
-.search-location-results{
-}
-
-.containerMap{
-margin-top: 2%; 
-height: 750px;
-width: 100%;
-}
-
-.modal-main {
-  font-size: 1.2em;  
+  body{
+    font-size: 1.5em;
   }
-.button-modal{
-  font-size:0.9em;
-}
+  .containerList{
+  height: 550px;
+  }
+
+  .containerSearchField{
+  display:flex;
+  flex-direction: column;
+  }
+
+  .titleOfApp{
+  height: 20%;
+  }
+
+  .titleOfApp h1{
+    font-size: 1.6em;
+  }
+
+  .containerMap{
+  margin-top: 2%; 
+  height: 750px;
+  width: 100%;
+  }
+
+  .modal-main {
+    font-size: 1.2em;  
+    height:50%;
+    }
+
+  .button-modal{
+    font-size:0.9em;
+  }
 }
 
 /*CSS Default Desktop version*/
 @media (min-width: 1026px) {
-body{
-  font-size: 1.1em;
-}
-.container{
-display:flex;
-flex-direction: row;
-}
-
-.containerList{
-height:750px;
-width: 20%;
-flex:1;
-}
-
-.containerSearchField{
-border: 2px solid black;
-display:flex;
-flex-direction: column;
-}
-
-.titleOfApp{
-border: 2px solid black;
-height: 20%;
-width:100%;
-flex:1;
-}
-
-.titleOfApp h1{
-  padding-left: 10%;
-  font-family: Helvetica, Arial, sans-serif;
-  text-shadow: 1px 1px grey;
-  font-size: 1.0em;
-}
-
-.inputAndFilterArea{
-border: 2px solid black;
-height: 40%;
-width:100%;
-flex:2;
-}
-
-.inputAndFilterArea form input{
-  outline:none;
-  height: 20px;
-  width:100%;
-  padding: 5%;
-}
-
-.inputWrapper{
-margin:0;
-box-sizing: border-box;
-width:50%;
-}
-
-.searchButtonWrapper{
-width: 20%;
-margin:0;
-
-}
-
-.search-location-results{
-height: 75%;
-margin-right: 5%;
-}
-.search-location-results li {
-  padding: 2%;
-  margin-right:8%;
-  margin-bottom: 8%;
-}
-
-.containerMap{
-height:750px;
-width: 80%;
-margin:0;
-}
-
-.mapContainer{
-
-}
-
-.map{
-  
-}
-.modal-main {
-  font-size: 2.0em;  
+  body{
+    font-size: 1.1em;
   }
-.button-modal{
-  font-size:0.8em;
-  height: 50px;
-}
-.modal-main {
-  height: 50%;
+  .container{
+  display:flex;
+  flex-direction: row;
+  }
+
+  .containerList{
+  height:750px;
+  width: 20%;
+  flex:1;
+  }
+
+  .titleOfApp{
+  height: 20%;
+  width:100%;
+  flex:1;
+  }
+
+  .titleOfApp h1{
+    padding-left: 10%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+  }
+
+  .inputAndFilterArea{
+  height: 40%;
+  width:100%;
+  flex:2;
+  }
+
+  .inputAndFilterArea form input{
+    outline:none;
+    height: 20px;
+    width:100%;
+    padding: 5%;
+  }
+
+  .search-location-results{
+  height: 75%;
+  margin-right: 5%;
+  }
+
+  .search-location-results li {
+    padding: 2%;
+    margin-right:8%;
+    margin-bottom: 8%;
+    color:#2E151B;
+  }
+
+  .containerMap{
+  height:750px;
+  width: 80%;
+  margin:0;
+  }
+
+  .modal-main {
+    font-size: 2.0em;  
+  }
+
+  .button-modal{
+    font-size:0.8em;
+    height: 50px;
+  }
+
+  .modal-main {
+    height: 50%;
   }
 
 }

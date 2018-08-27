@@ -23,7 +23,7 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
 							position={{ lat: place.marker.lat, lng: place.marker.lng }}
 							onClick={() => props.showModal(place)}
 						>
-						/*Modal info component: Opens when marker is clicked*/
+						{/*Modal info component: Opens when marker is clicked*/}
 							<Modal info={props.info} show={place.show} place={ place } places={props.places} handleClose={props.hideModal} >
 			             	</Modal>
 						</Marker>
@@ -33,12 +33,12 @@ const MyMap = withScriptjs(withGoogleMap((props) => {
 				
 				return(
 				<div>
-					/*Display the Map with GoogleMap component, defining latlng for defaultCenter and defaultZoom */
+					{/*Display the Map with GoogleMap component, defining latlng for defaultCenter and defaultZoom */}
 					<GoogleMap
 						defaultCenter = {{ lat: 40.417201, lng: -3.703598 }}
 						defaultZoom = { 15 }
 					>
-					/*Insert markers variable to display markers on map */
+					{/*Insert markers variable to display markers on map */}
 						{markers}
 					</GoogleMap>					
 				</div>
