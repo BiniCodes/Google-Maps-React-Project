@@ -10,6 +10,7 @@ class MapContainer extends Component{
 		return(
 			<div className='containerMap'>
 				<MyMap
+					info={this.props.info}
 					showModal={this.props.showModal}
 					hideModal={this.props.hideModal}
 					places={this.props.places} 
@@ -18,7 +19,7 @@ class MapContainer extends Component{
 					containerElement={<div style={{ height: `750px`, width: `100%` }} />}
 					mapElement={<div style={{ height: `100%` }} />}
 				/>
-       			{ console.log( this.props.places ) }
+       			{ console.log( this.props.info ) }
        		</div>
 			);
 	}

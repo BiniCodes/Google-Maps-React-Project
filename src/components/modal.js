@@ -5,18 +5,35 @@ import React, { Component } from 'react';
 class Modal extends Component{
 
 render(){
-  const { show, handleClose } = this.props;  
+  const { show, handleClose , place } = this.props;  
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-  let info;
+  let info = this.props.info;
 
     return (
       <div className={showHideClassName}>
-        <div className='modal-main'>
+        <div tabindex='0' className='modal-main'>
           <p>
-          {this.props.place.info}
+          <ol>
+          {		
+	          	info.map(i => {
+	          		if(place.id === i.id){
+	          			return(
+	          		<li className='modalInfo' key={i.id}>
+		                {i.name + ' '}
+		                {i.location.formattedAddress + ' '}
+	             	 </li>
+	             	 )
+	             	} else{
+	             		''
+	             	}
+	          	}) 			
+          }
+    	  </ol>	
           </p>
           <button
+          	aria-label="Close"
           	className='button-modal'
+          	tabindex='0'
             onClick={() => this.props.handleClose(this.props.place)}
           >
             Close

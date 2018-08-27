@@ -69,6 +69,7 @@ button{
   border-bottom: 2px solid black;
   padding: 2%;
   box-shadow: 1px 1px 2px grey;
+  list-style-type: none;
 }
 
 .inputWrapper{
@@ -118,10 +119,22 @@ width: 100%;
     width: 80%;
     height: 40%;
     border: 1px solid #9A1750;
+    font-size: 1.8em;
+  border-radius:25px;
+    
   }
 .button-modal{
   cursor: pointer;
+  width:20%;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  font-size:1.0em;
+  border-radius:25px;
+}
 
+.modalInfo{
+  list-style-type: none;
 }
 
 .display-block {

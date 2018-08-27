@@ -38,18 +38,19 @@ class Locations extends Component{
           <div className='containerList'>
 	            <div className='containerSearchField'>
 	              <div className='titleOfApp'>
-	                  <h1 >GoogleMapsProject</h1>
+	                  <h1 aria-label={'GoogleMapsProject'}>GoogleMapsProject</h1>
 	              </div>
 
 	              <div className='inputAndFilterArea'>
 	                    <form>
 	                      <input 
+	                      id="place name"
 	                      type="text" 
 	                      placeholder="Search Location"
 	                      value={this.state.query}
 	                      onChange={(e) => this.updateQuery(e.target.value)}
 	                      />
-	                      <button type="submit">SEARCH (ICON)</button>
+	                      <button aria-label="Submit" type="submit">SEARCH (ICON)</button>
 	                    </form>
 	              </div>  
 	            </div>
@@ -59,7 +60,15 @@ class Locations extends Component{
 		            {
 		                this.state.showingPlaces.map(place =>
 		                    <li key={place.name} className='locationListItem'>
-			                  <a href='#' onClick={() => this.props.changeMarker(place)}>{place.name}</a>
+			                  <a 
+			                  href='#' 
+			                  onKeyDown={(e) => (e.keyCode===13) ? this.props.changeMarker(place) : ''}
+			                  onKeyUp={() => setTimeout(() => this.props.defaultMarker(place),3500)}
+			                  onMouseDown={() => setTimeout(() => this.props.changeMarker(place),500)}
+			                  onMouseUp={() => setTimeout(() => this.props.defaultMarker(place),3500)}
+			                  >
+			                  {place.name}
+			                  </a>
 		                    </li>
 		                    )
 		            }
